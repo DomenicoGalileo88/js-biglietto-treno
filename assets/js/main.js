@@ -15,9 +15,19 @@ Questo richiederà un minimo di ricerca. */
 const km_da_percorrere = parseInt(prompt('Inserisci i km da percorrere'));
 /* console.log(km_da_percorrere); */
 
+//controllo valore km
+if (isNaN(km_da_percorrere)) {
+    alert('Errore. Inserisci un numero');
+} 
+
 // Chiedere età del passeggero
 const eta = parseInt(prompt('Inserisci età'));
 /* console.log(eta); */
+
+//controllo valore eta
+if (isNaN(eta)) {
+    alert('Errore. Inserisci un numero');
+} 
 
 // definire il costo dei km
 const prezzo_al_km = 0.21;
@@ -39,15 +49,14 @@ const prezzo_biglietto_over_65 = prezzo_del_biglietto - sconto_over_65;
 
 // Visualizzare il prezzo finale del biglietto comprensivo di sconti
 if (eta < 18) {
-    document.getElementById('biglietto').innerHTML = 'Il costo del biglietto è ' + prezzo_biglietto_minorenne + '€';
-    console.log(prezzo_biglietto_minorenne);
+    document.getElementById('biglietto').innerHTML = 'Il costo del biglietto è ' + prezzo_biglietto_minorenne.toFixed(2) + '€';
+    console.log(prezzo_biglietto_minorenne.toFixed(2));
 } else if (eta > 64){
-    document.getElementById('biglietto').innerHTML = 'Il costo del biglietto è ' + prezzo_biglietto_over_65 + '€';
-    console.log(prezzo_biglietto_over_65);
+    document.getElementById('biglietto').innerHTML = 'Il costo del biglietto è ' + prezzo_biglietto_over_65.toFixed(2) + '€';
+    console.log(prezzo_biglietto_over_65.toFixed(2));
 } else {
-    document.getElementById('biglietto').innerHTML = 'Il costo del biglietto è ' + prezzo_del_
-    biglietto + '€';
-    console.log(prezzo_del_biglietto);
+    document.getElementById('biglietto').innerHTML = 'Il costo del biglietto è ' + prezzo_del_biglietto.toFixed(2) + '€';
+    console.log(prezzo_del_biglietto.toFixed(2));
 }
 
 
