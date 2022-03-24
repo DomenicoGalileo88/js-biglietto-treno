@@ -59,4 +59,5 @@ if (eta < 18) {
     console.log(prezzo_del_biglietto.toFixed(2));
 }
 
-
+// .toFixed() serve per scegliere quanti caratteri visualizzare dopo la virgola
+// isNaN() serve per verificare se il suo contenuto è un numero
