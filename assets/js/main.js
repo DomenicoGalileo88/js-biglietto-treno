@@ -37,9 +37,10 @@ const prezzo_al_km = 0.21;
 const prezzo_del_biglietto = prezzo_al_km * km_da_percorrere;
 
 // sconti minorenne e over 65
-const sconto_minorenne = prezzo_del_biglietto * 20 / 100;
+const sconto_minorenne = prezzo_del_biglietto * 20 / 100; // oppure prezzo_del_biglietto - (prezzo_standard * 0.2)
 
 const sconto_over_65 = prezzo_del_biglietto * 40 / 100;
+//oppure prezzo_del_biglietto - (prezzo_standard * 0.2)
 
 // Prezzo biglietto minorenne e over 65
 
